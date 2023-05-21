@@ -24,4 +24,4 @@ def predict():
     return render_template("test.html", prediction_text="The Flower specie is: {}" .format(output))
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
