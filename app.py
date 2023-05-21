@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():   
-            return ("test html")
+            return render_template("test.html")
 @app.route("/predict", methods=["POST"])
 def predict():
     float_values = [float(x) for x in request.form.values()]
