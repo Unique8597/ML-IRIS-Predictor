@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Front Page</title>
+  <style>
+    body {
+      background-color: #333;
+      color: white;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin: 0 auto;
+    }
+    input {
+      margin: 10px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background-color: rgba(206, 209, 48, 0.966);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Iris Flower Species Prediction</title>
+</head>
+<body class="container">
+  <h1>Iris Flower Species Prediction</h1>
+  <p>Welcome to the Flower Species Prediction Homepage!</p>
+  <p>On this page, you can use our state-of-the-art machine learning model to predict the species of a flower based on its physical characteristics. Simply input the relevant information about the flower, such as its petal length and width, sepal length and width, and color, and our model will provide you with a prediction for the flower's species.</p>
+  <p>Our model has been trained on a diverse dataset of flowers from around the world, and is able to accurately predict the species of a wide range of flowers. Whether you are a botanist, a gardener, or simply someone who loves flowers, this tool can help you identify and learn about the beautiful plants that you encounter.</p>
+  <p>Thank you for visiting our Flower Species Prediction Homepage. We hope you find this tool useful and informative!</p>
+  <form action='/predict' method="post">
+    <input type="text" name ="input" id="inp1" placeholder="Petal Width" />
+    <input type="text" name="inp2" placeholder="Petal Length" />
+    <input type="text" name="inp3" placeholder="Sepal Length" />
+    <input type="text" name="inp4" placeholder="Sepal Width" />
+    <button type="submit" value="submit">Submit</button>
+  </form>
+  <p>{{prediction_text}}</p>
+</body>
+</html>
